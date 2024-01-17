@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThompsonJS - Portfolio</title>
+    <link rel="icon" href="thompson_pfp.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta property="og:title" content="Daniel Thompson's Portfolio">
+    <meta property="og:description" content="Explore the projects and skills of Daniel Thompson, a web developer & designer.">
+    <meta property="og:image" content="thompson_pfp.png">
+    <meta property="og:url" content="http://thompsonjsdev.com/">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #303f9f;
+            text-align: center;
+            padding: 50px 0;
+            color: #ffffff;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #b0bec5;
+        }
+
+        nav {
+            background-color: #3949ab;
+            overflow: hidden;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            display: inline-block;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, border-radius 0.3s;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #536dfe;
+        }
+
+        section {
+            padding: 50px;
+            text-align: left;
+            border-top: 1px solid #536dfe;
+            border-bottom: 1px solid #536dfe;
+        }
+
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #212121;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #757575;
+            border-radius: 10px;
+            border: 3px solid #212121;
+        }
+
+        body::-webkit-scrollbar-corner {
+            background-color: #212121;
+    }   
+
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: #757575 #212121;
+        }
+
+        section h2 {
+            color: #2196f3;
+        }
+
+        section p {
+            color: #b0bec5;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #303030;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+            overflow: hidden;
+        }
+
+        .project:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
+            color: #2196f3;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #b0bec5;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .project a {
+            display: inline-block;
+            background-color: #2196f3;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .project a:hover {
+            background-color: #1976d2;
+        }
+
+        footer {
+            background-color: #303f9f;
+            color: #b0bec5;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daniel Thompson</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Thompson, an 18-year-old developer based in the United Kingdom, specifically in the scenic county of Kent. I am a proficient developer with a keen interest and expertise in various domains, including:</p>
+    
+        <ul>
+            <li><strong>Web Development:</strong> Crafting modern and user-friendly websites is one of my passions. I enjoy bringing creative ideas to life through elegant and efficient web solutions.</li>
+            <li><strong>FiveM Development:</strong> Delving into the world of Grand Theft Auto V modifications, I specialize in FiveM development, creating immersive and customized experiences within the game.</li>
+            <li><strong>Discord Bot Development:</strong> I love exploring the possibilities of Discord bot development, adding functionality and interactivity to Discord servers.</li>
+        </ul>
+    
+        <p>My journey in the world of development is fueled by curiosity, creativity, and a commitment to continuous learning. I am always excited to take on new challenges and contribute to innovative projects. Let's build something amazing together!</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Cyber Protection</h3>
+            <p>A discord ban database system. Focusing on the blacklisting of users that break basic TOS within communities.</p>
+            <a href="https://cyberprotection.netlify.app/" target="_blank">View More</a>
+        </div>
+        <div class="project">
+            <h3>FiveM Roleplay Bot</h3>
+            <p>A simple discord bot that makes a request to your FiveM Server to establish a connection for uptime and players.</p>
+            <a href="https://cyberprotection.netlify.app/" target="_blank">View More</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me for any inquiries.</p>
+        <div>
+            <i class="fas fa-envelope"></i> thompsonjsdev@gmail.com
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Daniel Thompson. All rights reserved.
+    </footer>
+
+</body>
+</html>
