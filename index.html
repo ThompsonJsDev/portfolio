@@ -22,7 +22,7 @@
         }
 
         header {
-            background-color: #303f9f;
+            background: linear-gradient(to right, #303f9f, #1a1a1a);
             text-align: center;
             padding: 50px 0;
             color: #ffffff;
@@ -39,13 +39,9 @@
         }
 
         nav {
-            background-color: #3949ab;
-            overflow: hidden;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
         nav a {
@@ -57,6 +53,8 @@
             transition: background-color 0.3s, border-radius 0.3s;
             border-radius: 5px;
             margin: 0 5px;
+            background: transparent;
+            border: 1px solid #ffffff;
         }
 
         nav a:hover {
@@ -65,7 +63,7 @@
 
         section {
             padding: 50px;
-            text-align: left;
+            text-align: center;
             border-top: 1px solid #536dfe;
             border-bottom: 1px solid #536dfe;
         }
@@ -86,7 +84,7 @@
 
         body::-webkit-scrollbar-corner {
             background-color: #212121;
-    }   
+        }   
 
         body {
             scrollbar-width: thin;
@@ -141,6 +139,49 @@
             background-color: #1976d2;
         }
 
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(70, 70, 70, 0.411); 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            opacity: 0; 
+            transition: opacity 0.5s, background-color 0.3s;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #1ea5ff; 
+        }
+
+        .scroll-to-top .tooltip {
+            position: absolute;
+            bottom: 100%;
+            right: 50%;
+            margin-right: -15px; 
+            background-color: #536dfe;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-to-top:hover .tooltip {
+            opacity: 1;
+        }
+
+        .scroll-to-top i {
+            transition: transform 0.3s; 
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+        }
+
         footer {
             background-color: #303f9f;
             color: #b0bec5;
@@ -154,23 +195,23 @@
     <header>
         <h1>Daniel Thompson</h1>
         <p>Web Developer & Designer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I'm Thompson, an 18-year-old developer based in the United Kingdom, specifically in the scenic county of Kent. I am a proficient developer with a keen interest and expertise in various domains, including:</p>
     
-        <ul>
-            <li><strong>Web Development:</strong> Crafting modern and user-friendly websites is one of my passions. I enjoy bringing creative ideas to life through elegant and efficient web solutions.</li>
-            <li><strong>FiveM Development:</strong> Delving into the world of Grand Theft Auto V modifications, I specialize in FiveM development, creating immersive and customized experiences within the game.</li>
-            <li><strong>Discord Bot Development:</strong> I love exploring the possibilities of Discord bot development, adding functionality and interactivity to Discord servers.</li>
-        </ul>
+            <strong>Web Development:</strong>
+            <li>Crafting modern and user-friendly websites is one of my passions. I enjoy bringing creative ideas to life through elegant and efficient web solutions.</li>
+            <strong>FiveM Development:</strong>
+            <li>Delving into the world of Grand Theft Auto V modifications, I specialize in FiveM development, creating immersive and customized experiences within the game.</li>
+            <strong>Discord Bot Development:</strong>
+            <li>I love exploring the possibilities of Discord bot development, adding functionality and interactivity to Discord servers.</li>
     
         <p>My journey in the world of development is fueled by curiosity, creativity, and a commitment to continuous learning. I am always excited to take on new challenges and contribute to innovative projects. Let's build something amazing together!</p>
     </section>
@@ -185,7 +226,6 @@
         <div class="project">
             <h3>FiveM Roleplay Bot</h3>
             <p>A simple discord bot that makes a request to your FiveM Server to establish a connection for uptime and players.</p>
-            <a href="https://cyberprotection.netlify.app/" target="_blank">View More</a>
         </div>
     </section>
 
@@ -200,6 +240,50 @@
     <footer>
         &copy; 2024 Daniel Thompson. All rights reserved.
     </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        var isScrolling = false;
+    
+        function scrollToTop() {
+            if (!isScrolling) {
+                isScrolling = true;
+                smoothScrollToTop();
+            }
+        }
+    
+        function smoothScrollToTop() {
+            var currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+            var step = currentScrollPosition / 20;
+    
+            function scroll() {
+                if (currentScrollPosition > 0) {
+                    window.scrollBy(0, -step);
+                    currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+                    requestAnimationFrame(scroll);
+                } else {
+                    isScrolling = false;
+                }
+            }
+    
+            requestAnimationFrame(scroll);
+        }
+    
+        window.onscroll = function () {
+            var scrollToTopButton = document.querySelector('.scroll-to-top');
+            var currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+    
+            if (!isScrolling && currentScrollPosition > 20) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        };
+    </script>
+        
 
 </body>
 </html>
