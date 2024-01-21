@@ -3,282 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThompsonJS - River Development</title>
-    <link rel="icon" href="thompson_pfp.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <meta property="og:title" content="Daniel Thompson's Portfolio">
-    <meta property="og:description" content="Explore the projects and skills of Daniel Thompson, a web developer & designer.">
-    <meta property="og:image" content="thompson_pfp.png">
-    <meta property="og:url" content="https://thompsonjsdev.com/index">
-
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #212121;
-            color: #ffffff;
-        }
-
-        header {
-            background: linear-gradient(to right, #159a80, #1a1a1a);
-            text-align: center;
-            padding: 50px 0;
-            color: #ffffff;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #b0bec5;
-        }
-
-        nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        nav a {
-            display: inline-block;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s, border-radius 0.3s;
-            border-radius: 5px;
-            margin: 0 5px;
-            background: transparent;
-            border: 1px solid #ffffff;
-        }
-
-        nav a:hover {
-            background-color: #159a80;
-        }
-
-        section {
-            padding: 50px;
-            text-align: center;
-            border-top: 1px solid #159a80;
-            border-bottom: 1px solid #159a80;
-        }
-
-        body::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        body::-webkit-scrollbar-track {
-            background-color: #212121;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background-color: #757575;
-            border-radius: 10px;
-            border: 3px solid #212121;
-        }
-
-        body::-webkit-scrollbar-corner {
-            background-color: #212121;
-        }   
-
-        body {
-            scrollbar-width: thin;
-            scrollbar-color: #757575 #212121;
-        }
-
-        section h2 {
-            color: #159a80;
-        }
-
-        section p {
-            color: #b0bec5;
-        }
-
-        .project {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #303030;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s, transform 0.3s;
-            overflow: hidden;
-        }
-
-        .project:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .project h3 {
-            color: #159a80;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: #b0bec5;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .project a {
-            display: inline-block;
-            background-color: #159a80;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .project a:hover {
-            background-color: #159a80;
-        }
-
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(70, 70, 70, 0.411); 
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            opacity: 0; 
-            transition: opacity 0.5s, background-color 0.3s;
-        }
-
-        .scroll-to-top:hover {
-            background-color: #273746; 
-        }
-
-        .scroll-to-top .tooltip {
-            position: absolute;
-            bottom: 100%;
-            right: 50%;
-            margin-right: -15px; 
-            background-color: #159a80;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .scroll-to-top:hover .tooltip {
-            opacity: 1;
-        }
-
-        .scroll-to-top i {
-            transition: transform 0.3s; 
-        }
-
-        .scroll-to-top.show {
-            opacity: 1;
-        }
-
-        footer {
-            background-color: #159a80;
-            color: #b0bec5;
-            text-align: center;
-            padding: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="River-Systems.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-bKtbsYc/6HXClL6s5BIMjQdlj8Aki3qIrWe5sQtphxrr5fMI3jJddp6s5KTVJ54c9nhXk43OkI3Z6T8AWhA5g==" crossorigin="anonymous" />
+    <title>River Development</title>
 </head>
 <body>
 
     <header>
-        <h1>River Development</h1>
-        <p>Web Designing, Developing & More!</p>
+        <div class="logo">
+            <img src="River-Systems.png" alt="River Development">
+        </div>
         <nav>
-            <a href="https://discord.gg/rsRHDjJDvD">Join Discord</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="our_team.html">Our Team</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-    
-        <p>Welcome to <strong>River Development</strong>, where innovation meets precision in the vast world of digital solutions. We are a team of dedicated professionals committed to crafting exceptional experiences in the virtual realm.</p>
-    
-        <h3>What Sets Us Apart</h3>
-            <li><strong>Technical Expertise:</strong> Our seasoned team brings expertise in web development, Discord bot development, and FiveM development.</li>
-            <li><strong>Innovative Solutions:</strong> We thrive on challenges, turning complex concepts into elegant and functional solutions, staying abreast of industry trends.</li>
-            <li><strong>Collaborative Approach:</strong> Open communication and transparency ensure you are an integral part of the development process from concept to delivery.</li>
-            <li><strong>Client-Centric Focus:</strong> Your vision is our mission, and we are dedicated to exceeding your expectations.</li>
-    
-        <h3>Why Choose River Development?</h3>
-            <li><strong>Quality Assurance:</strong> We deliver high-quality solutions, meticulously testing and refining our work to ensure optimal performance.</li>
-            <li><strong>Creative Excellence:</strong> Our team combines technical prowess with creative flair, producing visually stunning and innovative solutions.</li>
-            <li><strong>Adaptability:</strong> In the dynamic digital landscape, we embrace change and continually evolve to keep your projects ahead of the curve.</li>
-    
-        <h3>Our Commitment to Excellence</h3>
-        <p>At <strong>River Development</strong>, we are committed to:</p>
-            <li><strong>Timely Delivery:</strong> Meeting deadlines and ensuring your projects are delivered on time.</li>
-            <li><strong>Customer Satisfaction:</strong> Going above and beyond to ensure you are satisfied with the end result.</li>
-            <li><strong>Ongoing Support:</strong> Providing continuous support and updates to keep your digital solutions running smoothly.</li>
-    
-        <h3>Who We Serve</h3>
-            <li><strong>Businesses:</strong> Seeking a robust online platform that stands out in the digital crowd.</li>
-            <li><strong>Communities:</strong> Looking for a custom Discord bot to enhance communication and automate tasks.</li>
-            <li><strong>Gaming Enthusiasts:</strong> Wanting a bespoke FiveM server for an immersive multiplayer gaming experience.</li>
-    
-        <p>Choose <strong>River Development</strong> as your partner in digital success. Let's build, connect, and thrive together in the dynamic world of web, Discord, and FiveM development.</p>
-    </section>
-    
-     
+    <main>
+        <section id="home">
+            <h1>Welcome to River Development</h1>
+            <p>Your partner in innovation and excellence. Explore our products and meet our dedicated team.</p>
+            <div class="statistics">
+                <div class="stat-box">
+                    <i class="fas fa-clock"></i>
+                    <h2>3+</h2>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>10+</h2>
+                    <p>Successful Projects</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h2>100%</h2>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2024 Daniel Thompson. All rights reserved.
+        <div class="footer-bottom">
+            <p>&copy; 2024 River Development</p>
+        </div>
     </footer>
-
-    <button class="scroll-to-top" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script>
-        var isScrolling = false;
-    
-        function scrollToTop() {
-            if (!isScrolling) {
-                isScrolling = true;
-                smoothScrollToTop();
-            }
-        }
-    
-        function smoothScrollToTop() {
-            var currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
-            var step = currentScrollPosition / 20;
-    
-            function scroll() {
-                if (currentScrollPosition > 0) {
-                    window.scrollBy(0, -step);
-                    currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
-                    requestAnimationFrame(scroll);
-                } else {
-                    isScrolling = false;
-                }
-            }
-    
-            requestAnimationFrame(scroll);
-        }
-    
-        window.onscroll = function () {
-            var scrollToTopButton = document.querySelector('.scroll-to-top');
-            var currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
-    
-            if (!isScrolling && currentScrollPosition > 20) {
-                scrollToTopButton.classList.add('show');
-            } else {
-                scrollToTopButton.classList.remove('show');
-            }
-        };
-    </script>
-        
 
 </body>
 </html>
