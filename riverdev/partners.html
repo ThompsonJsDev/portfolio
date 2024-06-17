@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="River-Systems.png" type="image/x-icon">
+    <title>Our Partners - River Development</title>
+    <style>
+        #partners-container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        #partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .partner {
+            text-align: center;
+            margin: 20px;
+            overflow: hidden;
+            max-width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .partner:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .partner-info {
+            padding: 20px;
+        }
+
+        .partner-info h2 {
+            margin-bottom: 10px;
+            color: #159a80;
+        }
+
+        .view-partner-button {
+            display: inline-block;
+            padding: 10px;
+            background-color: #159a80;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .view-partner-button:hover {
+            background-color: #273746;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="river.html">
+            <div class="logo">
+                <img src="River-Systems.png" alt="River Development">
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="river.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="our_team.html">Our Team</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+                <li><a href="https://discord.gg/HMKytJDM9u" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="partners-container">
+        <h1>Partners</h1>
+        <section id="partners">
+            <div class="partner">
+                <img src="https://media.discordapp.net/attachments/1199323201205960805/1228627301705453608/RD-Partner8.png?ex=662cbb57&is=661a4657&hm=7ad552924b3f6a957c15f73bc35136354265b8ef37f18300bbeb21c7afac9ecd&=&format=webp&quality=lossless&width=317&height=350" alt="Partner 6">
+                <div class="partner-info">
+                    <h2>vCity Roleplay</h2>
+                    <a href="https://discord.vcityrp.com" class="view-partner-button" target="_blank">View Partner</a>
+                </div>
+            </div>
+            <div class="partner">
+                <img src="https://media.discordapp.net/attachments/1199323201205960805/1228627643335970816/RD-Partner9.png?ex=662cbba8&is=661a46a8&hm=d4568ad99312d6d4a5f04a1d7020136fc772acb71eb4f15d25d9ae38c11a3026&=&format=webp&quality=lossless&width=608&height=671" alt="Partner 2">
+                <div class="partner-info">
+                    <h2>Watchdog Systems</h2>
+                    <a href="https://watchdogsystems.xyz" class="view-partner-button" target="_blank">View Partner</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
