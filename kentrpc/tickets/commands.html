@@ -78,6 +78,7 @@
             display: inline-block;
             background-color: #e74c3c;
             color: #ffffff;
+            font-weight: bold;
             border-radius: 12px;
             padding: 5px 10px;
             margin-top: 10px;
@@ -87,6 +88,7 @@
             display: inline-block;
             background-color: #ffd700;
             color: #000000;
+            font-weight: bold;
             border-radius: 12px;
             padding: 5px 10px;
             margin-top: 10px;
@@ -97,9 +99,55 @@
             font-size: 16px;
             color: #555555;
         }
+        .intro-box {
+            background-color: #3fa4ff;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .intro-box .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .intro-box .description {
+            font-size: 18px;
+        }
+        .intro-box .author {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #3fa4ff;
+            color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .footer a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+    <div class="intro-box">
+        <div class="title">Welcome to KentRPC Ticket System</div>
+        <div class="description">Here you can find all the commands you need to manage tickets efficiently.</div>
+        <div class="author">Tickets by Thompson</div>
+    </div>
     <div class="container">
         <div class="header">Ticket Commands</div>
         <div class="box-container">
@@ -154,6 +202,9 @@
                 <div class="description">This command will setup the interviews enquiry panel in the channel you execute the command in.</div>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        Any questions or concerns, please consult <a href="#">People Services Director E.Mallard</a>
     </div>
 </body>
 </html>
