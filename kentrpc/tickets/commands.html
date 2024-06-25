@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KentRPC | Ticket System Commands</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://media.discordapp.net/attachments/1250611893509558283/1251659172685283378/Copy_of_Logo.png?ex=667be831&is=667a96b1&hm=04bb508ac5d6e756e75e37ee4427c224c194d4e17fd8113b5564efff827f95c6&=&format=webp&quality=lossless" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta property="og:title" content="KentRPC | Ticket System">
+    <meta property="og:description" content="Kent Roleplay Community | Tickets by Thompson">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1250611893509558283/1251659172685283378/Copy_of_Logo.png?ex=667be831&is=667a96b1&hm=04bb508ac5d6e756e75e37ee4427c224c194d4e17fd8113b5564efff827f95c6&=&format=webp&quality=lossless">
+    <meta property="og:url" content="https://thompsonjsdev.com/kentrpc/tickets/commands">
+    <meta name="theme-color" content="#3fa4ff">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            margin: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            color: #333333;
+            text-transform: uppercase;
+        }
+        .header::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #333333;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .box {
+            background-color: #ecf0f1;
+            color: #333333;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .box .example {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .box .badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .box .badgeB {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000000;
+            border-radius: 12px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .box .description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Ticket Commands</div>
+        <div class="box-container">
+            <div class="box">
+                <div class="example">/add</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will add a user that you specify to the ticket in which you execute the command in.</div>
+            </div>
+            <div class="box">
+                <div class="example">/add-role</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will add a role that you specify to the ticket in which you execute the command in.</div>
+            </div>
+            <div class="box">
+                <div class="example">/close</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will close a ticket.</div>
+            </div>
+            <div class="box">
+                <div class="example">/remove</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will remove a user that you specify from the ticket in which you execute the command in.</div>
+            </div>
+            <div class="box">
+                <div class="example">/remove-role</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will remove a role that you specify from the ticket in which you execute the command in.</div>
+            </div>
+            <div class="box">
+                <div class="example">/rename</div>
+                <div class="badge">People Services</div>
+                <div class="description">This command will rename the ticket channel to whatever you specify.</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">SLT Ticket Commands</div>
+        <div class="box-container">
+            <div class="box">
+                <div class="example">/panels</div>
+                <div class="badgeB">SLT</div>
+                <div class="description">This command will allow you to toggle the functionality of each ticket panel.</div>
+            </div>
+            <div class="box">
+                <div class="example">/tickets-setup</div>
+                <div class="badgeB">SLT</div>
+                <div class="description">This command will setup the ticket panel in the channel you execute the command in.</div>
+            </div>
+            <div class="box">
+                <div class="example">/interviews-setup</div>
+                <div class="badgeB">SLT</div>
+                <div class="description">This command will setup the interviews enquiry panel in the channel you execute the command in.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
